@@ -29,6 +29,8 @@ namespace AspNetIdentity.WebApi
 
             ConfigureWebApi(httpConfig);
 
+            SwaggerConfig.Register(httpConfig);
+
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
 
             app.UseWebApi(httpConfig);
